@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>من نحن</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+    }
+
+    header {
+        background: #000;
+        color: #fff;
+        padding: 3px 10px;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .menu-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    nav {
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid #ccc;
+        z-index: 100;
+    }
+
+    nav.open {
+        max-height: 300px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav a:hover {
+        background: #f0f0f0;
+    }
+
+    .site-title {
+        font-size: 28px;
+        margin: 15px 0 5px;
+        color: #000;
+    }
+
+    .main-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="logo">
+        <img src="logo.png" alt="الشعار">
+    </div>
+    <nav id="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+</header>
+
+<h1 class="site-title">هدفك</h1>
+
+<div class="main-image">
+    <img src="about-image.jpg" alt="صورة تعريفية">
+</div>
+
+<!-- يمكنك إضافة محتوى "من نحن" هنا لاحقًا -->
+
+<footer>
+    &copy; <span id="year"></span> جميع الحقوق محفوظة - Cyber Aden 
+</footer>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
