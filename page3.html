@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سنة  ثانية كلية الحاسوب</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    /* الشريط العلوي */
+    header {
+      background: #000;
+      color: #fff;
+      padding: 3px 10px;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-btn {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    nav {
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      border-bottom: 1px solid #ccc;
+      z-index: 100;
+    }
+
+    nav.open {
+      max-height: 300px;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav a:hover {
+      background: #f0f0f0;
+    }
+
+    /* العنوان والنص */
+    .site-title {
+      font-size: 28px;
+      margin: 15px 0 5px;
+      color: #000;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* الصورة الرئيسية */
+    .main-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* الصور التفاعلية */
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .subject {
+      position: relative;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .subject img {
+      width: 40%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .subject:hover img {
+      transform: scale(1.05);
+    }
+
+    .subject-title {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .dropdown {
+      display: none;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #0077cc;
+      border-bottom: 1px solid #eee;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f9f9f9;
+    }
+
+    /* الشريط السفلي */
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+      border-top: 1px solid #ccc;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <div class="logo">
+    <img src="Logo.png" alt="الشعار">
+  </div>
+  <nav id="menu">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="services.html">الخدمات</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+<h1 class="site-title">هدفك</h1>
+<p class="tagline">سنة ثانية هي منتصف الرحلة الأكاديمية</p>
+
+<div class="main-image">
+  <img src="year1-banner.jpg" alt="">
+</div>
+
+<!-- الصور التفاعلية -->
+<div class="subjects">
+  <div class="subject" onclick="toggleDropdown('dropdown1')">
+    <img src="CY.jpg" alt="">
+    <div class="subject-title">الامن السيبراني</div>
+    <div class="dropdown" id="dropdown1">
+      <a href="cy2-1.html">الفصل الأول</a>
+      <a href="cy2-2.html">الفصل الثاني</a>
+    </div>
+  </div>
+
+  <div class="subject" onclick="toggleDropdown('dropdown2')">
+<img src="AI.jpg" alt="">
+    <div class="subject-title"> الذكاء الاصكناعي</div>
+    <div class="dropdown" id="dropdown2">
+      <a href="AI2-1.html">الفصل الأول</a>
+      <a href="Ai2-2.html">الفصل الثاني</a>
+    </div>
+  </div>
+
+  <div class="subject" onclick="toggleDropdown('dropdown3')">
+    <img src="IS.jpg" alt="">
+    <div class="subject-title"> نظم المعلومات</div>
+    <div class="dropdown" id="dropdown3">
+      <a href="IS2-1.html">الفصل الأول</a>
+      <a href="IS2-2.html">الفصل الثاني</a>
+    </div>
+  </div>
+
+  <div class="subject" onclick="toggleDropdown('dropdown4')">
+    <img src="CS.jpg" alt="">
+    <div class="subject-title"> علوم الحاسوب</div>
+    <div class="dropdown" id="dropdown4">
+      <a href="Cs2-1.html">الفصل الأول</a>
+      <a href="Cs2-2.html">الفصل الثاني</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; <span id="year"></span> جميع الحقوق محفوظة - Cyber Aden
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleDropdown(id) {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(drop => {
+      if (drop.id !== id) {
+        drop.style.display = 'none';
+      }
+    });
+
+    const selected = document.getElementById(id);
+    selected.style.display = selected.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+
+</html>
