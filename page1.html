@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>قائمة الملازم</title>
+<title>نماذج امتحان القبول</title>
 <style>
 body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
 h1 { text-align: center; }
@@ -16,7 +16,7 @@ footer { text-align: center; margin-top: 30px; font-size: 14px; }
 </head>
 <body>
 
-<h1>📚 الملازم</h1>
+<h1>📄 نماذج امتحان القبول</h1>
 <div class="items-container" id="fileList">
   جارٍ التحميل...
 </div>
@@ -28,8 +28,9 @@ footer { text-align: center; margin-top: 30px; font-size: 14px; }
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const folderId = "16FYpTY_hVM6klXG_PUQU-o8Z3JuvG_Kz";  // ضع هنا ID المجلد
-const apiKey = "AIzaSyDkBsyxkKKOsBtJJTTXsCaZtVMC1CFF9lA";      // ضع هنا الـ API Key
+// ID المجلد مباشرة من رابطك
+const folderId = "16FYpTY_hVM6klXG_PUQU-o8Z3JuvG_Kz";  
+const apiKey = "AIzaSyDkBsyxkKKOsBtJJTTXsCaZtVMC1CFF9lA";      // ضع هنا مفتاح الـ API Key الخاص بك
 
 async function loadFiles() {
     const res = await fetch(https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name));
@@ -55,9 +56,3 @@ loadFiles();
 
 </body>
 </html>
-
-
-
-
-
-
