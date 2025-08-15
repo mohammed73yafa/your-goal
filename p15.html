@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ملازم سنة ثالثة  تخصص قانون</title>
+  <title>سنة أولى</title>
   <style>
     body {
       margin: 0;
@@ -12,6 +12,7 @@
       text-align: center;
     }
 
+    /* الشريط العلوي */
     header {
       background: #000;
       color: #fff;
@@ -72,32 +73,56 @@
       background: #f0f0f0;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 30px;
+    /* العنوان والنص */
+    .site-title {
+      font-size: 28px;
+      margin: 15px 0 5px;
+      color: #000;
     }
 
-    .item {
+    .tagline {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* الصورة الرئيسية */
+    .main-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* الصور التفاعلية */
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .subject {
+      position: relative;
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 10px;
       cursor: pointer;
-      transition: transform 0.2s;
     }
 
-    .item:hover {
-      transform: translateY(-5px);
-    }
-
-    .item img {
-      width: 100%;
+    .subject img {
+      width: 40%;
+      height: auto;
       border-radius: 8px;
+      transition: transform 0.3s;
     }
 
-    .item p {
+    .subject:hover img {
+      transform: scale(1.05);
+    }
+
+    .subject-title {
       margin-top: 10px;
       font-size: 16px;
       color: #333;
@@ -109,12 +134,23 @@
       text-align: right;
     }
 
-    .dropdown img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 10px;
+    .dropdown a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #0077cc;
+      border-bottom: 1px solid #eee;
     }
 
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f9f9f9;
+    }
+
+    /* الشريط السفلي */
     footer {
       background: #fff;
       text-align: center;
@@ -134,94 +170,54 @@
   <nav id="menu">
     <a href="index.html">الرئيسية</a>
     <a href="about.html">من نحن</a>
+    <a href="services.html">الخدمات</a>
     <a href="contact.html">اتصل بنا</a>
   </nav>
 </header>
 
-<h1 style="margin-top: 20px;"> من هنا تبدا  قصة الكفاح</h1>
+<h1 class="site-title">هدفك</h1>
+<p class="tagline"</p>
 
-<div class="gallery">
-  <!-- صورة النماذج (تفتح قائمة) -->
- 
+<div class="main-image">
+  <img src="year1-banner.jpg" alt="">
+</div>
 
-  <!-- باقي الصور (تفتح روابط تليجرام) -->
-  <div class="item" onclick="window.open('', '_blank')">
-    <img src="file1.jpg" alt="">
-    <p></p>
+<!-- الصور التفاعلية -->
+<div class="subjects">
+  <div class="subject" onclick="toggleDropdown('dropdown1')">
+    <img src="CY.jpg" alt="">
+    <div class="subject-title">حقوق</div>
+    <div class="dropdown" id="dropdown1">
+      <a href="m5.html">الفصل الأول</a>
+      <a href="m6.html">الفصل الثاني</a>
+    </div>
   </div>
 
-  <div class="item" onclick="window.open('', '_blank')">
-    <img src="file2.jpg" alt="">
-    <p></p>
+  <div class="subject" onclick="toggleDropdown('dropdown2')">
+<img src="AI.jpg" alt="">
+    <div class="subject-title"> </div>
+    <div class="dropdown" id="dropdown2">
+      <a href=".html">الفصل الأول</a>
+      <a href=".html">الفصل الثاني</a>
+    </div>
   </div>
 
-  <div class="item" onclick="window.open('', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p> </p>
+  <div class="subject" onclick="toggleDropdown('dropdown3')">
+    <img src="IS.jpg" alt="">
+    <div class="subject-title"></div>
+    <div class="dropdown" id="dropdown3">
+      <a href=".html">الفصل الأول</a>
+      <a href=".html">الفصل الثاني</a>
+    </div>
   </div>
 
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p> </p>
-  </div>
-  
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p> </p>
-  </div>
-<div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p> </p>
-  </div>
-
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
- </div>
-     <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-        </div>
-        <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-
-    <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-    
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p></p>
-  </div>
-    
-
-
-
-        </div>
-
-
-
-  
-  <div class="item" onclick="window.open('https://t.me/file3', '_blank')">
-    <img src="file3.jpg" alt="">
-    <p> </p>
+  <div class="subject" onclick="toggleDropdown('dropdown4')">
+    <img src="CS.jpg" alt="">
+    <div class="subject-title"> </div>
+    <div class="dropdown" id="dropdown4">
+      <a href=".html">الفصل الأول</a>
+      <a href=".html">الفصل الثاني</a>
+    </div>
   </div>
 </div>
 
@@ -245,11 +241,12 @@
         drop.style.display = 'none';
       }
     });
-    
-const selected = document.getElementById(id);
+
+    const selected = document.getElementById(id);
     selected.style.display = selected.style.display === 'block' ? 'none' : 'block';
   }
 </script>
 
 </body>
+
 </html>
