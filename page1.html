@@ -1,4 +1,195 @@
-جمات الإلكترونية.
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>امتحان القبول كلية الحاسوب</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+    }
+
+    header {
+        background: #000;
+        color: #fff;
+        padding: 3px 10px;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .menu-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    nav {
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid #ccc;
+        z-index: 100;
+    }
+
+    nav.open {
+        max-height: 300px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav a:hover {
+        background: #f0f0f0;
+    }
+
+    .site-title {
+        font-size: 28px;
+        margin: 15px 0 5px;
+        color: #000;
+    }
+
+    .tagline {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .main-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        margin: 20px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .interactive-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .interactive-box {
+        width: 300px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .interactive-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .interactive-box img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .interactive-box p {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .link-list {
+        display: none;
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    .link-list a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: #0077cc;
+        font-size: 14px;
+    }
+
+    .link-list a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="logo">
+        <img src="Logo.png" alt="الشعار">
+    </div>
+    <nav id="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+</header>
+
+<h1 class="site-title">هدفك</h1>
+<p class="tagline">امتحان القبول هو أول خطوة نحو النجاح</p>
+
+<div class="main-image">
+    <img src="exam-banner.jpg" alt="">
+</div>
+
+<div class="content">
+    <!-- أضف هنا النص الذي تريده لاحقًا -->
+    <p>امتحان القبول والتخصصات في كلية الحاسوب
+
+تفتح كلية الحاسوب أبوابها سنويًا أمام الطلاب الراغبين في الالتحاق بمجالات التقنية الحديثة، حيث يتم امتحان القبول في يوم واحد يشمل جميع التخصصات المتاحة. يتكون الامتحان من ثلاث مواد رئيسية هي: الرياضيات، اللغة الإنجليزية، والحاسوب، وتُحسب نتيجة القبول بنسبة 70% من درجة الامتحان و30% من معدل الصف الثالث الثانوي.
+
+يقام الامتحان في كلية الحاسوب – المعلا .
+
+توفر الكلية أربعة تخصصات أساسية تواكب متطلبات سوق العمل:
+
+الأمن السيبراني: لحماية المعلومات والشبكات من الهجمات الإلكترونية.
 
 الذكاء الاصطناعي: لتطوير الأنظمة الذكية وتحليل البيانات.
 
@@ -62,3 +253,4 @@
 
 </body>
 </html>
+
